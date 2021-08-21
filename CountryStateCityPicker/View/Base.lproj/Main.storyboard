@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RN8-cS-ER6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf_pro_display_semibold.ttf">
+            <string>SFProDisplay-Semibold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CountryStateCityPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BkQ-Gc-KMa">
+                                <rect key="frame" x="41.5" y="385" width="331" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lE9-Td-xFU" userLabel="CountryPicker View">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="60"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="opy-Di-UjJ">
+                                                <rect key="frame" x="16" y="15" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="09Q-iB-GNj"/>
+                                                    <constraint firstAttribute="width" constant="30" id="YAT-EA-6V6"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a country" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1F-5f-InX">
+                                                <rect key="frame" x="62" y="20" width="127" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS1-jE-CKB">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="60"/>
+                                                <connections>
+                                                    <action selector="countryPickerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AK-Ll-wQY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="i1F-5f-InX" firstAttribute="centerY" secondItem="lE9-Td-xFU" secondAttribute="centerY" id="8rJ-cy-nO5"/>
+                                            <constraint firstAttribute="trailing" secondItem="aS1-jE-CKB" secondAttribute="trailing" id="DMZ-N1-Mce"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="i1F-5f-InX" secondAttribute="trailing" constant="8" id="NGs-nW-F1B"/>
+                                            <constraint firstAttribute="bottom" secondItem="aS1-jE-CKB" secondAttribute="bottom" id="RQQ-Yr-zHs"/>
+                                            <constraint firstItem="opy-Di-UjJ" firstAttribute="centerY" secondItem="lE9-Td-xFU" secondAttribute="centerY" id="Taq-iR-MWj"/>
+                                            <constraint firstItem="aS1-jE-CKB" firstAttribute="leading" secondItem="lE9-Td-xFU" secondAttribute="leading" id="VN7-LV-lFT"/>
+                                            <constraint firstItem="opy-Di-UjJ" firstAttribute="leading" secondItem="lE9-Td-xFU" secondAttribute="leading" constant="16" id="XX5-PG-waP"/>
+                                            <constraint firstItem="aS1-jE-CKB" firstAttribute="top" secondItem="lE9-Td-xFU" secondAttribute="top" id="pAS-LS-e1g"/>
+                                            <constraint firstAttribute="height" constant="60" id="pMW-9M-nkf"/>
+                                            <constraint firstItem="i1F-5f-InX" firstAttribute="leading" secondItem="opy-Di-UjJ" secondAttribute="trailing" constant="16" id="v13-3j-Z8N"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKR-r7-Jv4" userLabel="StatePicker View">
+                                        <rect key="frame" x="0.0" y="60" width="331" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a state" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQP-Uc-bNg">
+                                                <rect key="frame" x="62" y="20" width="106.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDp-r2-rd3">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="60"/>
+                                                <connections>
+                                                    <action selector="statePickerButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="veh-Fq-Feb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="ZDp-r2-rd3" firstAttribute="leading" secondItem="AKR-r7-Jv4" secondAttribute="leading" id="5NZ-zr-GPy"/>
+                                            <constraint firstAttribute="height" constant="60" id="8bi-ra-rmI"/>
+                                            <constraint firstItem="qQP-Uc-bNg" firstAttribute="leading" secondItem="AKR-r7-Jv4" secondAttribute="leading" constant="62" id="FYz-sF-09K"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZDp-r2-rd3" secondAttribute="trailing" id="UJp-Ke-c7Y"/>
+                                            <constraint firstAttribute="bottom" secondItem="ZDp-r2-rd3" secondAttribute="bottom" id="YyD-20-yF7"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qQP-Uc-bNg" secondAttribute="trailing" constant="8" id="cWU-jS-N1f"/>
+                                            <constraint firstItem="qQP-Uc-bNg" firstAttribute="centerY" secondItem="AKR-r7-Jv4" secondAttribute="centerY" id="hHh-uR-zrP"/>
+                                            <constraint firstItem="ZDp-r2-rd3" firstAttribute="top" secondItem="AKR-r7-Jv4" secondAttribute="top" id="sJ7-2P-M5q"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEx-2T-taw" userLabel="City Picker View">
+                                        <rect key="frame" x="0.0" y="120" width="331" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gre-fx-sRh">
+                                                <rect key="frame" x="62" y="20" width="95.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNk-wG-DSf">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="60"/>
+                                                <connections>
+                                                    <action selector="cityUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gBB-iF-zED"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="Gre-fx-sRh" firstAttribute="leading" secondItem="IEx-2T-taw" secondAttribute="leading" constant="62" id="2wu-eE-uuP"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gre-fx-sRh" secondAttribute="trailing" constant="8" id="ARc-6F-ibH"/>
+                                            <constraint firstItem="zNk-wG-DSf" firstAttribute="leading" secondItem="IEx-2T-taw" secondAttribute="leading" id="IuY-qT-3KI"/>
+                                            <constraint firstItem="zNk-wG-DSf" firstAttribute="top" secondItem="IEx-2T-taw" secondAttribute="top" id="LpG-Xt-zQS"/>
+                                            <constraint firstAttribute="height" constant="60" id="VtU-Pg-ShY"/>
+                                            <constraint firstItem="Gre-fx-sRh" firstAttribute="centerY" secondItem="IEx-2T-taw" secondAttribute="centerY" id="eHk-Fg-6D6"/>
+                                            <constraint firstAttribute="trailing" secondItem="zNk-wG-DSf" secondAttribute="trailing" id="jZT-eJ-JKI"/>
+                                            <constraint firstAttribute="bottom" secondItem="zNk-wG-DSf" secondAttribute="bottom" id="qOf-IF-RM7"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BkQ-Gc-KMa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DQg-4x-Esb"/>
+                            <constraint firstItem="BkQ-Gc-KMa" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="TXS-UR-cJ1"/>
+                            <constraint firstItem="BkQ-Gc-KMa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="jaQ-1C-1vk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hc3-oP-TfW"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="Gre-fx-sRh" id="em9-yI-foQ"/>
+                        <outlet property="countryImageView" destination="opy-Di-UjJ" id="kWv-lb-Kr2"/>
+                        <outlet property="countryLabel" destination="i1F-5f-InX" id="aHK-7c-4By"/>
+                        <outlet property="stateLabel" destination="qQP-Uc-bNg" id="Mz8-j3-Qc2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521.73913043478262" y="0.0"/>
+        </scene>
+        <!--Country PickerVC-->
+        <scene sceneID="VGy-UV-6FS">
+            <objects>
+                <viewController storyboardIdentifier="CountryPickerVC" id="a3F-aO-RJH" customClass="CountryPickerVC" customModule="CountryStateCityPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C6w-mr-jNN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFL-DP-iHc">
+                                <rect key="frame" x="207" y="453" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="20"/>
+                                <color key="textColor" name="darkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select A Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMT-60-mea">
+                                <rect key="frame" x="139" y="68" width="136.5" height="21"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="18"/>
+                                <color key="textColor" name="darkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Aa-vj-Vl5">
+                                <rect key="frame" x="0.0" y="105" width="414" height="757"/>
+                                <color key="backgroundColor" name="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GEE-sa-Spc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EMT-60-mea" firstAttribute="top" secondItem="GEE-sa-Spc" secondAttribute="top" constant="24" id="34n-wb-9iH"/>
+                            <constraint firstItem="AFL-DP-iHc" firstAttribute="centerY" secondItem="GEE-sa-Spc" secondAttribute="centerY" id="6S3-hR-aeY"/>
+                            <constraint firstItem="0Aa-vj-Vl5" firstAttribute="top" secondItem="EMT-60-mea" secondAttribute="bottom" constant="16" id="8MJ-Ug-R1h"/>
+                            <constraint firstItem="0Aa-vj-Vl5" firstAttribute="leading" secondItem="GEE-sa-Spc" secondAttribute="leading" id="Hlk-ub-CWT"/>
+                            <constraint firstItem="EMT-60-mea" firstAttribute="centerX" secondItem="GEE-sa-Spc" secondAttribute="centerX" id="Y9C-fb-njP"/>
+                            <constraint firstItem="GEE-sa-Spc" firstAttribute="trailing" secondItem="0Aa-vj-Vl5" secondAttribute="trailing" id="g28-5D-3bk"/>
+                            <constraint firstItem="AFL-DP-iHc" firstAttribute="centerX" secondItem="GEE-sa-Spc" secondAttribute="centerX" id="gqa-Mk-R0t"/>
+                            <constraint firstItem="GEE-sa-Spc" firstAttribute="bottom" secondItem="0Aa-vj-Vl5" secondAttribute="bottom" id="tzx-u5-IXv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryPickerTitleLabel" destination="EMT-60-mea" id="yrf-RZ-wwC"/>
+                        <outlet property="emptyDataLabel" destination="AFL-DP-iHc" id="EXZ-Qp-gJq"/>
+                        <outlet property="tableView" destination="0Aa-vj-Vl5" id="MT4-G8-8Bl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GP2-qa-RBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276.8115942028987" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nt5-qT-eZo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RN8-cS-ER6" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jGo-KS-lH1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wEy-1S-RPa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2eJ-SD-5JL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-388.40579710144931" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="darkColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteColor">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
